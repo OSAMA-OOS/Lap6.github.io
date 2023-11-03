@@ -1,0 +1,17 @@
+<h1 class="m-3">Cart</h1>
+<div class="card m-3" *ngFor="let p of cart">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{p.image}}" style="height: 180px;" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{p.title}}</h5>
+        <p class="card-text">{{p.description}}</p>
+        <p class="card-text"><small class="text-body-secondary">{{p.price}}$</small></p>
+        <button (click)="delete(p.id)" class="btn btn-danger">Remove from Cart</button>
+
+      </div>
+    </div>
+  </div>
+</div>

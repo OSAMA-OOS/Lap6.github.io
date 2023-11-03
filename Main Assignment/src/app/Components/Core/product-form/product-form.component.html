@@ -1,0 +1,35 @@
+<br>
+<h1 class="ms-5">{{prodID!=null?'Edit Product':'Add Product'}}</h1>
+<form class="row g-3 m-5" (submit)="GetData($event)">
+  <div class="col-12">
+    <label for="name" class="form-label">Title</label>
+    <input type="text" class="form-control is-valid" id="name" name="name" [(ngModel)]="product.title" required>
+
+  </div>
+
+
+  <div class="col-12">
+    <label for="age" class="form-label">Price</label>
+    <input type="number" class="form-control is-valid" id="age" name="age" [(ngModel)]="product.price" required>
+
+  </div>
+
+
+  <div class="col-12">
+    <label for="address" class="form-label">Description</label>
+    <input type="text" class="form-control is-valid" id="address" name="address" [(ngModel)]="product.description"
+      required>
+
+  </div>
+
+
+  <div class="col-12">
+    <label for="class" class="form-label">Category</label>
+    <input type="text" class="form-control is-valid" id="class" name="class" [(ngModel)]="product.category" required>
+
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-success" type="submit">Confirm</button>
+  </div>
+</form>

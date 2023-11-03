@@ -1,0 +1,24 @@
+<br>
+<div class="p-3">
+
+
+
+  <h1 class="text-center">Product Details</h1>
+  <br>
+  <div class="card m-2">
+    <div class="card-header">
+      Title : {{product?.title}} , ID :{{product?.id}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><img src="{{product?.image}}" alt="" style="width: 9rem;"></li>
+      <li class="list-group-item"> Price : {{product?.price}}</li>
+      <li class="list-group-item"> Description : {{product?.description}}</li>
+      <li class="list-group-item"> Category : {{product?.category}}</li>
+
+    </ul>
+  </div>
+  <br>
+  <button class="btn btn-dark " [routerLink]="['/products']">Back </button>
+
+
+</div>

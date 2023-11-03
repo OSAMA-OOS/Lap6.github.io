@@ -1,0 +1,33 @@
+<div class="p-3">
+  <h1 class="ms-4">Dashboard</h1>
+  <br>
+  <button class="btn btn-success ms-4" [routerLink]="['/products/new']">Add New Products</button>
+<br>
+<br> 
+  <div class="container ">
+    <div class="row">
+
+      <div class="card col-4 m-auto mb-4" style="width: 18rem;" *ngFor="let p of products ">
+        <img src="{{p.image}}" class="card-img-top" alt="..." style="height: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{p.title}}</h5>
+          <p class="card-text">{{p.description}}</p>
+          <h4>{{p.price}}$</h4>
+          <button (click)="addToCart(p)" class="btn btn-primary">Add To Cart</button>
+          <span class="ms-4">
+
+            <i class="bi fs-5 text-dark bi-info-circle-fill cursor-pointer"
+              [routerLink]="['/products/details',p.id]"></i>
+            |
+            <i class="bi fs-5 text-success bi-pencil-fill cursor-pointer" [routerLink]="['/products/edit',p.id]"></i> |
+            <i class="bi fs-5 text-danger bi-person-x-fill cursor-pointer" (click)="delete(p.id)"></i>
+
+          </span>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
